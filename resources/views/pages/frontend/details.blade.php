@@ -32,10 +32,10 @@
               <div class="px-2">
                 <div
                   class="item selected"
-                  data-img="{{ url('/images/content/showcase-1.front.jpg') }}"
+                  data-img="{{ url('/frontend/images/content/showcase-1.front.jpg') }}"
                 >
                   <img
-                    src="{{ url('/images/content/showcase-1.front.jpg') }}"
+                    src="{{ url('/frontend/images/content/showcase-1.front.jpg') }}"
                     alt="front"
                     class="object-cover w-full h-full rounded-lg"
                   />
@@ -44,10 +44,10 @@
               <div class="px-2">
                 <div
                   class="item"
-                  data-img="{{ url('/images/content/showcase-1.back.jpg') }}"
+                  data-img="{{ url('/frontend/images/content/showcase-1.back.jpg') }}"
                 >
                   <img
-                    src="{{ url('/images/content/showcase-1.back.jpg') }}"
+                    src="{{ url('/frontend/images/content/showcase-1.back.jpg') }}"
                     alt="back"
                     class="object-cover w-full h-full rounded-lg"
                   />
@@ -56,10 +56,10 @@
               <div class="px-2">
                 <div
                   class="item"
-                  data-img="{{ url('/images/content/showcase-1.rear.jpg') }}"
+                  data-img="{{ url('/frontend/images/content/showcase-1.rear.jpg') }}"
                 >
                   <img
-                    src="{{ url('/images/content/showcase-1.rear.jpg') }}"
+                    src="{{ url('/frontend/images/content/showcase-1.rear.jpg') }}"
                     alt="rear"
                     class="object-cover w-full h-full rounded-lg"
                   />
@@ -68,10 +68,10 @@
               <div class="px-2">
                 <div
                   class="item"
-                  data-img="{{ url('/images/content/showcase-1.side.jpg') }}"
+                  data-img="{{ url('/frontend/images/content/showcase-1.side.jpg') }}"
                 >
                   <img
-                    src="{{ url('/images/content/showcase-1.side.jpg') }}"
+                    src="{{ url('/frontend/images/content/showcase-1.side.jpg') }}"
                     alt="side"
                     class="object-cover w-full h-full rounded-lg"
                   />
@@ -80,10 +80,10 @@
               <div class="px-2">
                 <div
                   class="item"
-                  data-img="{{ url('/images/content/showcase-1.top.jpg') }}"
+                  data-img="{{ url('/frontend/images/content/showcase-1.top.jpg') }}"
                 >
                   <img
-                    src="{{ url('/images/content/showcase-1.top.jpg') }}"
+                    src="{{ url('/frontend/images/content/showcase-1.top.jpg') }}"
                     alt="top"
                     class="object-cover w-full h-full rounded-lg"
                   />
@@ -93,7 +93,7 @@
             <div class="preview">
               <div class="item rounded-lg h-full overflow-hidden">
                 <img
-                  src="{{ url('/images/content/showcase-1.front.jpg') }}"
+                  src="{{ url('/frontend/images/content/showcase-1.front.jpg') }}"
                   alt="front"
                   class="object-cover w-full h-full rounded-lg"
                 />
@@ -163,7 +163,7 @@
             <div class="rounded-xl p-4 pb-8 relative bg-white">
               <div class="rounded-xl overflow-hidden card-shadow w-full h-36">
                 <img
-                  src="{{ url('/images/content/chair-1.png') }}"
+                  src="{{ url('/frontend/images/content/chair-1.png') }}"
                   alt=""
                   class="w-full h-full object-cover object-center"
                 />
@@ -179,7 +179,7 @@
             <div class="rounded-xl p-4 pb-8 relative bg-white">
               <div class="rounded-xl overflow-hidden card-shadow w-full h-36">
                 <img
-                  src="{{ url('/images/content/chair-2.png') }}"
+                  src="{{ url('/frontend/images/content/chair-2.png') }}"
                   alt=""
                   class="w-full h-full object-cover object-center"
                 />
@@ -195,7 +195,7 @@
             <div class="rounded-xl p-4 pb-8 relative bg-white">
               <div class="rounded-xl overflow-hidden card-shadow w-full h-36">
                 <img
-                  src="{{ url('/images/content/chair-3.png') }}"
+                  src="{{ url('/frontend/images/content/chair-3.png') }}"
                   alt=""
                   class="w-full h-full object-cover object-center"
                 />
@@ -211,7 +211,7 @@
             <div class="rounded-xl p-4 pb-8 relative bg-white">
               <div class="rounded-xl overflow-hidden card-shadow w-full h-36">
                 <img
-                  src="{{ url('/images/content/chair-1.png') }}"
+                  src="{{ url('/frontend/images/content/chair-1.png') }}"
                   alt=""
                   class="w-full h-full object-cover object-center"
                 />

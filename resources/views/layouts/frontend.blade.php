@@ -11,16 +11,16 @@
     <meta property="og:url" content="" />
     <meta property="og:image" content="" />
 
-    {{-- <link rel="manifest" href="site.webmanifest" /> --}}
-    <link rel="apple-touch-icon" href="{{ url('/images/content/favicon.png') }}" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="{{ url('/frontend/images/content/favicon.png') }}" />
     <!-- Place favicon.ico in the root directory -->
 
-    {{-- <link rel="stylesheet" href="{{ url('/css/main.css') }}" /> --}}
-    <link rel="icon" href="{{ url('/images/content/favicon.png') }}" />
+    <link rel="stylesheet" href="{{ url('/frontend/css/main.css') }}" />
+    <link rel="icon" href="{{ url('/frontend/images/content/favicon.png') }}" />
 
     <meta name="theme-color" content="#000" />
     <link rel="icon" href="{{ url('favicon.ico') }}">
-    <link href="{{ url('/css/app.minify.css') }}" rel="stylesheet">
+    <link href="{{ url('/frontend/css/app.minify.css') }}" rel="stylesheet">
 </head>
 
   <body>
@@ -54,6 +54,6 @@
       ga("send", "pageview");
     </script>
     <script src="https://www.google-analytics.com/analytics.js" async></script>
-  <script src="{{ url('/js/app.minify.js') }}"></script>
+  <script src="{{ url('/frontend/js/app.js') }}"></script>
 </body>
 </html>

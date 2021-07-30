@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ProductRequest;
-use App\Models\Product;
+use App\Http\Requests\UserRequest;
+use App\Models\User;
+use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
-use Illuminate\Support\Str;
 
-class ProductController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,24 +17,18 @@ class ProductController extends Controller
     public function index()
     {
         if(request()->ajax()) {
-            $query = Product::query();
+            $query = User::query();
 
             return DataTables::of($query)
                 ->addColumn('action', function($item) {
                     return '
                         <a 
-                            class="inline-block bg-green-700 border border-green-700 text-white rounded-md px-2 py-1 m-1 transition duration-500 ease select-none hover:bg-green-800 focus:outline-none focus:shadow-outline" 
-                            href="' . route('dashboard.product.gallery.index', $item->id) . '">
-                                Gallery
-                        </a>
-
-                        <a 
                             class="inline-block border border-yellow-700 bg-yellow-700 text-white rounded-md px-2 py-1 m-1 transition duration-500 ease select-none hover:bg-yellow-800 focus:outline-none focus:shadow-outline" 
-                            href="' . route('dashboard.product.edit', $item->id) . '">
+                            href="' . route('dashboard.user.edit', $item->id) . '">
                                 Edit
                         </a>
 
-                        <form action="'. route('dashboard.product.destroy', $item->id) .'" method="POST" class="inline-block">
+                        <form action="'. route('dashboard.user.destroy', $item->id) .'" method="POST" class="inline-block">
                             '. method_field("DELETE") . csrf_field() .'
 
                             <button type="submit" class="inline-block border border-red-700 bg-red-700 text-white rounded-md px-2 py-1 m-1 transition duration-500 ease select-none hover:bg-red-800 focus:outline-none focus:shadow-outline">
@@ -43,14 +37,11 @@ class ProductController extends Controller
                         </form>
                     ';
                 })
-                ->editColumn('price', function($item) {
-                    return number_format($item->price);
-                })
                 ->rawColumns(['action'])
                 ->make();
         }
 
-        return view('pages.dashboard.product.index');
+        return view('pages.dashboard.user.index');
     }
 
     /**
@@ -60,7 +51,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('pages.dashboard.product.create');
+        //
     }
 
     /**
@@ -69,14 +60,9 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ProductRequest $request)
+    public function store(Request $request)
     {
-        $data = $request->all();
-        $data['slug'] = Str::slug($request->name);
-
-        Product::create($data);
-
-        return redirect()->route('dashboard.product.index')->with('toast_success', 'Data has been created!');
+        //
     }
 
     /**
@@ -96,9 +82,9 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit(User $user)
     {
-        return view('pages.dashboard.product.edit', compact('product'));
+        return view('pages.dashboard.user.edit', compact('user'));
     }
 
     /**
@@ -108,14 +94,13 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(ProductRequest $request, Product $product)
+    public function update(UserRequest $request, User $user)
     {
         $data = $request->all();
-        $data['slug'] = Str::slug($request->name);
 
-        $product->update($data);
+        $user->update($data);
 
-        return redirect()->route('dashboard.product.index')->with('toast_success', 'Data has been updated!');
+        return redirect()->route('dashboard.user.index')->with('toast_success', 'User has been updated!');
     }
 
     /**
@@ -124,10 +109,10 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy(User $user)
     {
-        $product->delete();
-    
-        return redirect()->route('dashboard.product.index')->with('toast_success', 'Data has been deleted!');
+        $user->delete();
+
+        return redirect()->route('dashboard.user.index')->with('toast_success', 'User has been deleted!');
     }
 }

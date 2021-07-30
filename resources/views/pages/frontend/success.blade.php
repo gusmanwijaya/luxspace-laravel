@@ -22,7 +22,7 @@
         <div class="flex flex-col items-center justify-center">
           <div class="w-full md:w-4/12 text-center">
             <img
-              src="{{ url('/images/content/illustration-success.png') }}"
+              src="{{ url('/frontend/images/content/illustration-success.png') }}"
               alt="congrats illustration"
             />
             <h2 class="text-3xl font-semibold mb-6">Ah yes it’s success!</h2>
