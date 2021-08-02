@@ -35,6 +35,12 @@
                                 {{ __('User') }}
                         </x-jet-nav-link>
                     @endif
+
+                    <x-jet-nav-link 
+                        href="{{ route('dashboard.my-transaction.index') }}" 
+                        :active="request()->routeIs('dashboard.my-transaction.index')">
+                            {{ __('My Transaction') }}
+                    </x-jet-nav-link>
                 </div>
             </div>
 
@@ -181,6 +187,12 @@
                         {{ __('User') }}
                 </x-jet-responsive-nav-link>
             @endif
+
+            <x-jet-responsive-nav-link 
+                href="{{ route('dashboard.my-transaction.index') }}" 
+                :active="request()->routeIs('dashboard.my-transaction.index')">
+                    {{ __('My Transaction') }}
+            </x-jet-responsive-nav-link>
         </div>
 
         <!-- Responsive Settings Options -->
